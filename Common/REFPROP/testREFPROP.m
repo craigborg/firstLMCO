@@ -6,8 +6,13 @@
 load goodData.mat 
 
 % Make a call to your REFPROP database (installed iaw the project doc) ;)
-myData = refpropm2D('C','T',[200,290,300],'P',[100,200],'methane'); % This 
-% calls for the specific heat at constant pressure for a pure methane
+try
+    myData = refpropm2D('C','T',[200,290,300],'P',[100,200],'methane'); 
+    % This calls for the specific heat at constant pressure for a pure methane
+catch
+     addpath('C:\Demos\REFPROP\REFPROP_for_MW'); % add folder containing REFPROP 
+     myData = refpropm2D('C','T',[200,290,300],'P',[100,200],'methane'); 
+end
 
 %% Compare
 if myData == goodData
@@ -16,3 +21,4 @@ else
     disp('REFPROP database test: Failed')
 end
 
+clear goodData myData
