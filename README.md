@@ -24,12 +24,14 @@ insidelabs-git.mathworks.com (login/password is your inside MathWorks login/pass
 
  
 
-## c.       If you've already created an SSH key for Git refer to http://git-scm.com/book/en/Git-on-the-Server-Generating-Your-SSH-Public-Key
+## c.       If you've already created an SSH key for Git:
+refer to http://git-scm.com/book/en/Git-on-the-Server-Generating-Your-SSH-Public-Key
 
 Use a brand new folder name to download your id_rsa and id_rsa.pub into, e.g. c/temp/id_rsa
 
  
-## d.      If you haven't already created an SSH key for Git:   Add an SSH key to your insidelabs-git.mathworks.com profile:
+## d.      If you haven't already created an SSH key for Git:
+   Add an SSH key to your insidelabs-git.mathworks.com profile:
 
 Open a Git Bash Terminal (Start Menu -> Programs -> Git)
 Type into terminal window: ssh-keygen -t rsa -C yourMWusername@mathworks.com
@@ -48,21 +50,26 @@ Skip to step 5, if a project already exists on the MathWorks GitLab Server, and 
 
  
 
-## 1.) In a Web Browser, sign into your insidelabs-git.mathworks.com account 
+## 1.) Sign In:
+In a Web Browser, sign into your insidelabs-git.mathworks.com account 
 (http://insidelabs-git.mathworks.com/)
 
-## 2.) From the Dashboard, click on "New Project" 
-(green button on right-hand side of page)
+## 2.) New Project:
+From the Dashboard, click on "New Project" (green button on right-hand side of page)
 
-## 3.) Provide a project name, description, visibility level, and click "Create Project"
+## 3.) Create Project:
+Provide a project name, description, visibility level, and click "Create Project"
 
-## 4.) On the newly created project page, SSH should have black text as the default selection, if not, click 'SSH'?, and copy the project's "git@..." url
+## 4.) SSH:
+On the newly created project page, SSH should have black text as the default selection, if not, click 'SSH'?, and copy the project's "git@..." url
 
-## 4a.) Click the 'Settings' tab and add members/developers that you would like to collaborate with on your new project
+## 4a.) Settings:
+Click the 'Settings' tab and add members/developers that you would like to collaborate with on your new project
 
  
 
-## 5.) In MATLAB, click "New" (drop down arrow) -> Simulink Project -> From Source Control
+## 5.) In MATLAB:
+click "New" (drop down arrow) -> Simulink Project -> From Source Control
 
 Source control integration: Git
 Repository path: paste the copied git url (from Step 4)
@@ -73,7 +80,8 @@ The AE may stop after this step if their goal was simply to gain access to anoth
 
  
 
-## 6.) If asked to Create a New Simulink Project, click 'Yes'
+## 6.) New Simulink Project:
+If asked to Create a New Simulink Project, click 'Yes'
 
 Template: Add the AEG Demo Template if you are creating a demo from scratch (optional)
 See \\mathworks\AH\Public\David_Meissner\SimulinkProjects for a .zip to add to your Simulink Project Template Path OR pull down the template as a version controlled project in Simulink Project from http://insidelabs-git.mathworks.com/dmeissne/coredemotemplategit.git (this would be that path pasted in step 5 above)
@@ -81,7 +89,8 @@ Project definition files: Use multiple project files
 Source control integration: Click "Detect" button, and Git source control will appear (otherwise, select "Git")
 Click "Create" button to create a new Simulink Project
 
-## 7.) Add project files, Commit changes to Local Repository, and Push to Online Git Repository
+## 7.) Push your project online:
+Add project files, Commit changes to Local Repository, and Push to Online Git Repository
 
 Copy any desired files from another directory into your newly created project's sandbox directory
 From the "All Files" View in the Simulink Project window, select the files you wish to add to your project -> Right Click -> Add to Project (or Add Folder to Project) OR drag a label from the Labels sub-window to the file.
@@ -91,7 +100,8 @@ Click on "Commit Modified Files" to commit changes to your local sandbox reposit
 Select "Push" from the Git sub-window to move your recently updated project to the project's online git repository
 Sign in when prompted using your insidelabs-git.mathworks account
 
-## 8.)    Create a personal/new branch (when desired):
+## 8.) Branching:
+Create a personal/new branch (when desired):
 
 Click on "Manage Branches" in the Simulink Projects window (Git sub-window)
 Choose a Branch from the drop-down menu and highlight a date/time stamp from the list that you wish to create a new branch (most recent on top)
@@ -101,14 +111,15 @@ Close Manage Branches Tool
 Select "Push" button from the Git sub-window to move your updated branch to the online GitLab repository
 Sign in when prompted using your insidelabs-git.mathworks account
 
-## 9.)    Switch branches (when desired):
+## 9.) Switch branches (when desired):
 
 Click on "Manage Branches" in the Simulink Projects window (Git sub-window)
 Select the Branch from the drop-down menu you wish to work on
 Click the "Switch" button (Note: You cannot switch to an online/remote repository branches)
 Close Manage Branches Tool
 
-## 10.)  Fetch and Merge another developer's updates into your branch (when desired):
+## 10.)  Fetch/Merge:
+Fetch and Merge another developer's updates into your branch (when desired):
 
 Perform this step after being notified of changes by an owner or a developer on your team
 
@@ -131,17 +142,22 @@ Additional Recommended Actions for Project Robustness:
 
  
 
-11.)  Protect your master branch from other developers being able to push changes to your 'golden copy':
+## 11.)  Protect: 
+Protect your master branch from other developers being able to push changes to your 'golden copy':
 
 Navigate to your 'Commits' tab on your insidelabs-git.mathworks project's website:
 Select 'Branches' sub-tab
 Select Protected view -> Choose your master branch -> Click 'Protect'
-12.)  See how your projects files are related, dependent on one another, or unable to find a referenced file:
+
+## 12.)  Dependency Analysis:
+See how your projects files are related, dependent on one another, or unable to find a referenced file:
 
 In Simulink Projects, Select the "Dependency Analysis" view
 Click on "Analyze"
 Select the "Impact" sub-view
-13.)  Run integrity checks for missing files, files not in source control, and files not added to the project:
+
+## 13.)  Integrity Checks:
+Run integrity checks for missing files, files not in source control, and files not added to the project:
 
 In Simulink Projects, Select the "Modified Files" View
 Click "Check Project" in the Precommit actions sub-window
