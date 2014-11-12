@@ -1,10 +1,10 @@
-Initial Git Setup Instructions:
+# Initial Git Setup Instructions:
 
 (Everyone must perform these quick initial steps in order to be able to communicate with the MathWorks Git Server)
 
  
 
-a.       First, download command-line Git from here:
+## a.       First, download command-line Git from here:
 
 http://msysgit.github.io/
 
@@ -18,18 +18,18 @@ As required: Review git-scm.com's doc on first time setup (Git Book Chapter 1.5 
 * It also works to edit the PATH variable manually, even if Git is already installed. Just attach <;C:\Program Files (x86)\Git\bin;C:\Program Files (x86)\Git\cmd?> to the PATH variable (Control panel -> System ->Advanced System Settings ->Environment Variables -> System Variables).
  
 
-b.      Next, Create an account on GitLab here:
+## b.      Next, Create an account on GitLab here:
 
 insidelabs-git.mathworks.com (login/password is your inside MathWorks login/password; e.g. dmeissne)
 
  
 
-c.       If you've already created an SSH key for Git refer to http://git-scm.com/book/en/Git-on-the-Server-Generating-Your-SSH-Public-Key
+## c.       If you've already created an SSH key for Git refer to http://git-scm.com/book/en/Git-on-the-Server-Generating-Your-SSH-Public-Key
 
 Use a brand new folder name to download your id_rsa and id_rsa.pub into, e.g. c/temp/id_rsa
 
  
-d.      If you haven't already created an SSH key for Git:   Add an SSH key to your insidelabs-git.mathworks.com profile:
+## d.      If you haven't already created an SSH key for Git:   Add an SSH key to your insidelabs-git.mathworks.com profile:
 
 Open a Git Bash Terminal (Start Menu -> Programs -> Git)
 Type into terminal window: ssh-keygen -t rsa -C yourMWusername@mathworks.com
@@ -42,25 +42,27 @@ Navigate to http://insidelabs-git.mathworks.com/profile/keys, and add your copie
 
  
 
-New Simulink Project Instructions:
+# New Simulink Project Instructions:
 
 Skip to step 5, if a project already exists on the MathWorks GitLab Server, and you simply wish to download the demo using the project's HTTP URL (e.g. http://insidelabs-git.mathworks.com/jeremyr/robot-arm.git)
 
  
 
-1.) In a Web Browser, sign into your insidelabs-git.mathworks.com account (http://insidelabs-git.mathworks.com/)
+## 1.) In a Web Browser, sign into your insidelabs-git.mathworks.com account 
+(http://insidelabs-git.mathworks.com/)
 
-2.) From the Dashboard, click on "New Project" (green button on right-hand side of page)
+## 2.) From the Dashboard, click on "New Project" 
+(green button on right-hand side of page)
 
-3.) Provide a project name, description, visibility level, and click "Create Project"
+## 3.) Provide a project name, description, visibility level, and click "Create Project"
 
-4.) On the newly created project page, SSH should have black text as the default selection, if not, click 'SSH'?, and copy the project's "git@..." url
+## 4.) On the newly created project page, SSH should have black text as the default selection, if not, click 'SSH'?, and copy the project's "git@..." url
 
-4a.) Click the 'Settings' tab and add members/developers that you would like to collaborate with on your new project
+## 4a.) Click the 'Settings' tab and add members/developers that you would like to collaborate with on your new project
 
  
 
-5.) In MATLAB, click "New" (drop down arrow) -> Simulink Project -> From Source Control
+## 5.) In MATLAB, click "New" (drop down arrow) -> Simulink Project -> From Source Control
 
 Source control integration: Git
 Repository path: paste the copied git url (from Step 4)
@@ -71,14 +73,15 @@ The AE may stop after this step if their goal was simply to gain access to anoth
 
  
 
-6.) If asked to Create a New Simulink Project, click 'Yes'
+## 6.) If asked to Create a New Simulink Project, click 'Yes'
 
 Template: Add the AEG Demo Template if you are creating a demo from scratch (optional)
 See \\mathworks\AH\Public\David_Meissner\SimulinkProjects for a .zip to add to your Simulink Project Template Path OR pull down the template as a version controlled project in Simulink Project from http://insidelabs-git.mathworks.com/dmeissne/coredemotemplategit.git (this would be that path pasted in step 5 above)
 Project definition files: Use multiple project files
 Source control integration: Click "Detect" button, and Git source control will appear (otherwise, select "Git")
 Click "Create" button to create a new Simulink Project
-7.) Add project files, Commit changes to Local Repository, and Push to Online Git Repository
+
+## 7.) Add project files, Commit changes to Local Repository, and Push to Online Git Repository
 
 Copy any desired files from another directory into your newly created project's sandbox directory
 From the "All Files" View in the Simulink Project window, select the files you wish to add to your project -> Right Click -> Add to Project (or Add Folder to Project) OR drag a label from the Labels sub-window to the file.
@@ -87,7 +90,8 @@ Note: If any additions/modifications will need to eventually be merged by anothe
 Click on "Commit Modified Files" to commit changes to your local sandbox repository
 Select "Push" from the Git sub-window to move your recently updated project to the project's online git repository
 Sign in when prompted using your insidelabs-git.mathworks account
-8.)    Create a personal/new branch (when desired):
+
+## 8.)    Create a personal/new branch (when desired):
 
 Click on "Manage Branches" in the Simulink Projects window (Git sub-window)
 Choose a Branch from the drop-down menu and highlight a date/time stamp from the list that you wish to create a new branch (most recent on top)
@@ -96,13 +100,15 @@ From the Branches dropdown select the branch you just created, i.e. JeremyBranch
 Close Manage Branches Tool
 Select "Push" button from the Git sub-window to move your updated branch to the online GitLab repository
 Sign in when prompted using your insidelabs-git.mathworks account
-9.)    Switch branches (when desired):
+
+## 9.)    Switch branches (when desired):
 
 Click on "Manage Branches" in the Simulink Projects window (Git sub-window)
 Select the Branch from the drop-down menu you wish to work on
 Click the "Switch" button (Note: You cannot switch to an online/remote repository branches)
 Close Manage Branches Tool
-10.)  Fetch and Merge another developer's updates into your branch (when desired):
+
+## 10.)  Fetch and Merge another developer's updates into your branch (when desired):
 
 Perform this step after being notified of changes by an owner or a developer on your team
 
