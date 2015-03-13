@@ -12,16 +12,16 @@
 % commit on the master branch
 %
 %% Checkout the master
-!git checkout master
+% !git checkout master
 
 %% Create the Archive
-timeStamp = char(datetime('now','Format','yyyy-MM-dd HH:mm:ss'));
+timeStamp = char(datetime('now','Format','yyyy-MM-dd_HH:mm:ss'));
 thisProject = slproject.getCurrentProject;
 projectName = thisProject.Name;
-fileName = [projectName,timeStamp];
-% !git archive -o fileName.zip HEAD
+fileName = [projectName,timeStamp]
+% >git archive -o fileName.zip HEAD
 
 %% Copy/Paste the Archive to your public
 
-myPublic = '\\mathworks\AH\Public\David_Meissner\sharedDemos\CoreDemoTemplateGit';
-% !copy fileName myPublic
+myPublic = '\\mathworks\AH\Public\David_Meissner\sharedDemos\CoreDemoTemplateGit'
+% >copy fileName myPublic
