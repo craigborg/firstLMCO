@@ -1,0 +1,15 @@
+As you author your paper, consider these questions:
+
+Technical Content
+Are all major factors considered (correctness of theory, validity of the reasoning used, apparent understanding and grasp of subject, etc.) and a reasonably accurate evaluation of these facts made?
+
+Originality
+Is the paper just a compilation of standard textbook information, or does the paper show independence of thinking or fresh approach to the subject? Is the subject a well-worn one, or does the choice and treatment of it show some imagination?
+
+Practical Application
+Does you reach conclusions or recommendations that are feasible and practical for use, or do you merely lead the audience into further difficult or insoluble questions?
+
+Style and Form
+Is the paper written in commendable English and does it present the material clearly and in the good, acceptable form for technical papers?
+
+(Referenc: AIAA Conference Judging Scoring Standards)
