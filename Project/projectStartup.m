@@ -12,12 +12,7 @@ if ~exist(workFolder, 'dir')
 end
 
 %% Generic Tasks
-% Open what I need to navigate the demo (LTC vs CDA vs SPC may have
-% different techniques here)
-openHTML(); % publish the html for navigation and open it
-getRootFolder; % make the rootFolder available in the workspace, if needed
-% convertFromOldVersion % convert all old simulink models to the current Sversion
-%
+
 %% Custom Tasks for this demo
 % % Specify that the work folder be the cache folder for files related to
 % % model updates and code generation
