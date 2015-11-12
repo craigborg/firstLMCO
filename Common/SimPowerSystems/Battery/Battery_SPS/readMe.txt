@@ -1,0 +1,2 @@
+The battery is discharged by the constant DC load of 50 A. 
+When the SOC drops under 0.4, a mechanical torque of -200 Nm isapplied so the machine acts as a generator and provides a currentof 100 amps. Hence, 50 amps goes to the load and 50 amps goes to rechargethe battery. When the SOC goes over 0.8, the mechanical torque isremoved and the machine operates freely. And then the cycle restarts.
