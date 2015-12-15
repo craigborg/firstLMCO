@@ -6,7 +6,7 @@
    <!--
 This HTML was auto-generated from MATLAB code.
 To make changes, update the MATLAB code and republish this document.
-      --><title>How to... Add Everything in a Folder to Git</title><meta name="generator" content="MATLAB 8.4"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2015-03-08"><meta name="DC.source" content="howToAddEverything.m"><style type="text/css">
+      --><title>How to... Add Everything in a Folder to Git</title><meta name="generator" content="MATLAB 8.6"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2015-12-15"><meta name="DC.source" content="howToAddEverything.m"><style type="text/css">
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
 
 html { min-height:100%; margin-bottom:1px; }
@@ -66,7 +66,7 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 
 
 
-  </style></head><body><div class="content"><h1>How to... Add Everything in a Folder to Git</h1><!--introduction--><p>The Simulink Projects interface was not designed to provide access to all of Git's command line functionality. Here are a few common tasks that users may find useful and how to accomplish them without too much fuss.</p><p>By David Meissner</p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Step 1: Initialize a Git Repository in your root folder</a></li><li><a href="#2">Step 2: Do a Dry Run</a></li><li><a href="#3">Step 3: Add All Files to the Staging Area</a></li><li><a href="#4">Step 4: Make a Commit</a></li></ul></div><h2>Step 1: Initialize a Git Repository in your root folder<a name="1"></a></h2><p>&gt;&gt;cd ProjectDirectory</p><p>&gt;&gt;!git init</p><div><ul><li>This will create a Git repo in ProjectDirectory, a branch with the default name master, and it will make master the current branch.</li></ul></div><h2>Step 2: Do a Dry Run<a name="2"></a></h2><div><ul><li>git add adds files in the working directory to the staging area. This adds the files to a list called the index so Git knows what to commit when you make the next commit.</li></ul></div><p>&gt;&gt;!git add -A -n</p><div><ul><li>The -A tells Git to add all the files in the current directory and all subfolders.</li><li>The -n tells Git that this will just be a dry run.</li></ul></div><h2>Step 3: Add All Files to the Staging Area<a name="3"></a></h2><p>&gt;&gt;!git add -A</p><h2>Step 4: Make a Commit<a name="4"></a></h2><p>&gt;&gt;!git commit -m "Initial commit"</p><div><ul><li>The -m tells Git that you'll be adding the commit message in the quotes that immediately follows.</li></ul></div><p class="footer">Copyright 2015 The MathWorks, Inc.<br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2014b</a><br></p></div><!--
+  </style></head><body><div class="content"><h1>How to... Add Everything in a Folder to Git</h1><!--introduction--><p>The Simulink Projects interface was not designed to provide access to all of Git's command line functionality. Here are a few common tasks that users may find useful and how to accomplish them without too much fuss.</p><p>By David Meissner</p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Step 1: Initialize a Git Repository in your root folder</a></li><li><a href="#2">Step 2: Do a Dry Run</a></li><li><a href="#3">Step 3: Add All Files to the Staging Area</a></li><li><a href="#4">Step 4: Make a Commit</a></li><li><a href="#5">Step 5: Add a remote repository</a></li><li><a href="#6">Step 6: Push your master branch to your remote named master</a></li></ul></div><h2>Step 1: Initialize a Git Repository in your root folder<a name="1"></a></h2><p>&gt;&gt;cd ProjectDirectory</p><p>&gt;&gt;!git init</p><div><ul><li>This will create a Git repo in ProjectDirectory, a branch with the default name master, and it will make master the current branch.</li></ul></div><h2>Step 2: Do a Dry Run<a name="2"></a></h2><div><ul><li>git add adds files in the working directory to the staging area. This adds the files to a list called the index so Git knows what to commit when you make the next commit.</li></ul></div><p>&gt;&gt;!git add -A -n</p><div><ul><li>The -A tells Git to add all the files in the current directory and all subfolders.</li><li>The -n tells Git that this will just be a dry run.</li></ul></div><h2>Step 3: Add All Files to the Staging Area<a name="3"></a></h2><p>&gt;&gt;!git add -A</p><h2>Step 4: Make a Commit<a name="4"></a></h2><p>&gt;&gt;!git commit -m "Initial commit"</p><div><ul><li>The -m tells Git that you'll be adding the commit message in the quotes that immediately follows.</li></ul></div><h2>Step 5: Add a remote repository<a name="5"></a></h2><p>&gt;&gt;!git remote add origin <a href="mailto:git@insidelabs-git.mathworks.com">git@insidelabs-git.mathworks.com</a>:dmeissne/myAwesomeProject.git</p><h2>Step 6: Push your master branch to your remote named master<a name="6"></a></h2><p>&gt;&gt;!git push origin master</p><p class="footer">Copyright 2015 The MathWorks, Inc.<br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2015b</a><br></p></div><!--
 ##### SOURCE BEGIN #####
 %% How to... Add Everything in a Folder to Git
 %
@@ -107,6 +107,14 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 %
 % * The -m tells Git that you'll be adding the commit message in the quotes
 % that immediately follows.
+%
+%% Step 5: Add a remote repository
+%
+% >>!git remote add origin git@insidelabs-git.mathworks.com:dmeissne/myAwesomeProject.git
+%
+%% Step 6: Push your master branch to your remote named master
+%
+% >>!git push origin master
 %
 ##### SOURCE END #####
 --></body></html>

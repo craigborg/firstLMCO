@@ -38,3 +38,11 @@
 % * The -m tells Git that you'll be adding the commit message in the quotes
 % that immediately follows.
 %
+%% Step 5: Add a remote repository
+%
+% >>!git remote add origin git@insidelabs-git.mathworks.com:dmeissne/myAwesomeProject.git
+%
+%% Step 6: Push your master branch to your remote named master
+%
+% >>!git push origin master
+%
